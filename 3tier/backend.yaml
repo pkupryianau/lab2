@@ -19,7 +19,7 @@ spec:
           image: sassy19a/titanic-backend
           imagePullPolicy: Always
           ports:
-            - containerPort: 8082
+            - containerPort: 8080
           env:
             - name: model_url
               value: http://model-svc.titanic.svc.cluster.local:8081
@@ -51,6 +51,6 @@ spec:
     app: backend
   ports:
     - protocol: TCP
-      port: 8082
-      targetPort: 8082
+      port: 8080
+      targetPort: 8080
   type: ClusterIP
